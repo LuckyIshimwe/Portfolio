@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ORANGE, ORANGE_LIGHT, BG, WHITE, BORDER, STATS } from "../constants";
+import { ORANGE, BG, WHITE, BORDER, STATS } from "../constants";
 import luckyPhoto from "../assets/lucky.png";
 
 export default function Hero() {
@@ -28,7 +28,7 @@ export default function Hero() {
     };
     t = setTimeout(tick, 800);
     return () => clearTimeout(t);
-  }, []);
+  }, [words]);
 
   return (
     <section id="hero" style={{
