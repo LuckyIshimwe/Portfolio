@@ -16,10 +16,11 @@ export default function About() {
   const [ref, inView] = useInView();
   return (
     <section id="about" ref={ref} style={{ padding: "7rem 5%", background: BG2 }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "start" }}>
+      <div className="about-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "start" }}>
+
         <div style={{ opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(30px)", transition: "all 0.8s ease" }}>
           <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ORANGE, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "0.5rem" }}>— About Me</p>
-          <h2 style={{ fontWeight: 800, fontSize: "clamp(2rem,4vw,3rem)", color: WHITE, letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1.5rem" }}>Driven by <span style={{ color: ORANGE }}>Purpose.</span></h2>
+          <h2 style={{ fontWeight: 800, fontSize: "clamp(1.8rem,4vw,3rem)", color: WHITE, letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1.5rem" }}>Driven by <span style={{ color: ORANGE }}>Purpose.</span></h2>
           <p style={{ fontSize: "0.93rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.9, marginBottom: "1.25rem" }}>I'm a student at Agahozo-Shalom Youth Village pursuing Mathematics, Physics, and Computer Science. I believe technology is a tool for liberation — and education is the most powerful force for change.</p>
           <p style={{ fontSize: "0.93rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.9, marginBottom: "2rem" }}>From founding a Code Club to co-developing an award-winning water pollution removal robot, everything I do is rooted in one belief: <span style={{ color: WHITE, fontWeight: 600 }}>young Africans can — and will — build the future.</span></p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: "2rem" }}>
@@ -37,7 +38,7 @@ export default function About() {
 
         <div style={{ opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(30px)", transition: "all 0.8s ease 0.2s" }}>
           <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ORANGE, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "0.5rem" }}>— Skills</p>
-          <h2 style={{ fontWeight: 800, fontSize: "clamp(2rem,4vw,3rem)", color: WHITE, letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "2rem" }}>What I <span style={{ color: ORANGE }}>Bring</span></h2>
+          <h2 style={{ fontWeight: 800, fontSize: "clamp(1.8rem,4vw,3rem)", color: WHITE, letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "2rem" }}>What I <span style={{ color: ORANGE }}>Bring</span></h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "1.4rem" }}>
             {SKILLS.map((s, i) => (
               <div key={s.name} style={{ opacity: inView ? 1 : 0, transition: `opacity 0.5s ease ${0.3 + i * 0.1}s` }}>
@@ -53,6 +54,15 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .about-grid {
+            grid-template-columns: 1fr !important;
+            gap: 3rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

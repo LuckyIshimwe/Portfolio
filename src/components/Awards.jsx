@@ -19,9 +19,9 @@ export default function Awards() {
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ marginBottom: "3.5rem" }}>
           <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ORANGE, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "0.5rem" }}>— Recognition</p>
-          <h2 style={{ fontWeight: 800, fontSize: "clamp(2rem,4vw,3rem)", color: WHITE, letterSpacing: "-0.025em", lineHeight: 1.1 }}>Honors & <span style={{ color: ORANGE }}>Awards</span></h2>
+          <h2 style={{ fontWeight: 800, fontSize: "clamp(1.8rem,4vw,3rem)", color: WHITE, letterSpacing: "-0.025em", lineHeight: 1.1 }}>Honors & <span style={{ color: ORANGE }}>Awards</span></h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.25rem" }}>
+        <div className="awards-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.25rem" }}>
           {AWARDS.map((a, i) => (
             <div key={a.title} style={{ background: BG3, border: `1px solid ${BORDER}`, borderRadius: 16, padding: "1.75rem 2rem", display: "flex", gap: "1.25rem", alignItems: "flex-start", opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(20px)", transition: `all 0.6s ease ${i * 0.1}s` }}>
               <div style={{ width: 52, height: 52, borderRadius: 12, background: ORANGE_DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.55rem", flexShrink: 0 }}>{a.icon}</div>
@@ -34,6 +34,13 @@ export default function Awards() {
           ))}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .awards-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

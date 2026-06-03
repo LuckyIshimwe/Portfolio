@@ -19,9 +19,9 @@ export default function Projects() {
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ marginBottom: "3.5rem" }}>
           <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ORANGE, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "0.5rem" }}>— Work & Initiatives</p>
-          <h2 style={{ fontWeight: 800, fontSize: "clamp(2rem,4vw,3rem)", color: WHITE, letterSpacing: "-0.025em", lineHeight: 1.1 }}>Work That <span style={{ color: ORANGE }}>Matters</span></h2>
+          <h2 style={{ fontWeight: 800, fontSize: "clamp(1.8rem,4vw,3rem)", color: WHITE, letterSpacing: "-0.025em", lineHeight: 1.1 }}>Work That <span style={{ color: ORANGE }}>Matters</span></h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.25rem" }}>
+        <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.25rem" }}>
           {PROJECTS.map((p, i) => (
             <div key={p.title}
               style={{ background: BG3, border: `1px solid ${BORDER}`, borderRadius: 16, padding: "2rem", opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(24px)", transition: `all 0.65s ease ${i * 0.12}s` }}
@@ -29,7 +29,7 @@ export default function Projects() {
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = BORDER; e.currentTarget.style.background = BG3; }}
             >
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: "1.25rem" }}>
-                <div style={{ width: 48, height: 48, borderRadius: 12, background: ORANGE_DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem" }}>{p.icon}</div>
+                <div style={{ width: 48, height: 48, borderRadius: 12, background: ORANGE_DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem", flexShrink: 0 }}>{p.icon}</div>
                 <span style={{ fontSize: "0.7rem", color: ORANGE, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>{p.tag}</span>
               </div>
               <h3 style={{ fontWeight: 700, fontSize: "1.15rem", color: WHITE, margin: "0 0 0.7rem" }}>{p.title}</h3>
@@ -43,6 +43,13 @@ export default function Projects() {
           ))}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .projects-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
