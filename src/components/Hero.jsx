@@ -160,68 +160,67 @@ export default function Hero() {
             impact.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              gap: 12,
-              marginTop: "2.5rem",
-              flexWrap: "wrap",
-            }}
-          >
-            
-              href="#projects"
-              style={{
-                background: ORANGE,
-                color: "#fff",
-                padding: "0.85rem 2rem",
-                borderRadius: 10,
-                fontWeight: 600,
-                fontSize: "0.88rem",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                transition: "transform 0.2s, box-shadow 0.2s",
-                boxShadow: "0 8px 32px rgba(255,107,0,0.3)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow =
-                  "0 12px 40px rgba(255,107,0,0.45)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "none";
-                e.currentTarget.style.boxShadow =
-                  "0 8px 32px rgba(255,107,0,0.3)";
-              }}
-            >
-              View My Work →
-            </a>
+         <div
+  style={{
+    display: "flex",
+    gap: 12,
+    marginTop: "2.5rem",
+    flexWrap: "wrap",
+  }}
+>
+  
+  <a  href="#projects"
+    style={{
+      background: ORANGE,
+      color: "#fff",
+      padding: "0.85rem 2rem",
+      borderRadius: 10,
+      fontWeight: 600,
+      fontSize: "0.88rem",
+      display: "inline-flex",
+      alignItems: "center",
+      gap: 8,
+      transition: "transform 0.2s, box-shadow 0.2s",
+      boxShadow: "0 8px 32px rgba(255,107,0,0.3)",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = "translateY(-2px)";
+      e.currentTarget.style.boxShadow = "0 12px 40px rgba(255,107,0,0.45)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = "none";
+      e.currentTarget.style.boxShadow = "0 8px 32px rgba(255,107,0,0.3)";
+    }}
+  >
+    View My Work →
+  </a>
 
-            
-              href="#contact"
-              style={{
-                background: "transparent",
-                color: WHITE,
-                padding: "0.85rem 2rem",
-                borderRadius: 10,
-                fontWeight: 600,
-                fontSize: "0.88rem",
-                border: `1px solid ${BORDER}`,
-                transition: "border-color 0.2s, color 0.2s",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "rgba(255,107,0,0.45)";
-                e.currentTarget.style.color = ORANGE;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = BORDER;
-                e.currentTarget.style.color = WHITE;
-              }}
-            >
-              Let's Connect
-            </a>
+  
+<a    href="#contact"
+    style={{
+      background: "transparent",
+      color: WHITE,
+      padding: "0.85rem 2rem",
+      borderRadius: 10,
+      fontWeight: 600,
+      fontSize: "0.88rem",
+      border: `1px solid ${BORDER}`,
+      transition: "border-color 0.2s, color 0.2s",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.borderColor = "rgba(255,107,0,0.45)";
+      e.currentTarget.style.color = ORANGE;
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.borderColor = BORDER;
+      e.currentTarget.style.color = WHITE;
+    }}
+  >
+    Let's Connect
+  </a>
+
           </div>
 
           <div
