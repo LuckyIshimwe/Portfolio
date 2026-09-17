@@ -33,7 +33,11 @@ export default function Experience() {
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8, marginBottom: "0.5rem" }}>
                     <div>
                       <div style={{ fontWeight: 700, fontSize: "0.98rem", color: WHITE }}>{item.role}</div>
-                      <div style={{ fontSize: "0.82rem", color: ORANGE, fontWeight: 600, marginTop: 2 }}>{item.org}</div>
+                      <div style={{ fontSize: "0.82rem", color: ORANGE, fontWeight: 600, marginTop: 2 }}>
+                        {item.link ? (
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ color: ORANGE, textDecoration: "none" }}>{item.org} ↗</a>
+                        ) : item.org}
+                      </div>
                     </div>
                     <span style={{ fontSize: "0.72rem", fontWeight: 500, color: "rgba(255,255,255,0.28)", whiteSpace: "nowrap" }}>{item.period}</span>
                   </div>

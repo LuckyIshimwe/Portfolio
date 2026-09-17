@@ -54,12 +54,12 @@ export const EXPERIENCE = [
   { period: "Aug 2025–Aug 2026", role: "Minister of Education", org: "ASYV Student Government",           detail: "Implemented peer-support programs and academic engagement strategies." },
   { period: "Aug 2024–Present",  role: "Program Lead",          org: "Sifa Institute for Citizenship",    detail: "Led citizenship development; promoted Rwandan civic values and national identity." },
   { period: "Nov 2024–Present",  role: "Access Scholar",        org: "U.S. Dept. of State",               detail: "Merit-based scholarship — 360+ hours of English training and leadership development." },
-  // { period: "Aug 2025",          role: "Selected Participant",  org: "Yale Young African Scholars (YYAS)", detail: "Competitive selection for YYAS global academic enrichment program." },
+  { period: "Aug 2026",          role: "Selected Participant",  org: "Yale Young African Scholars (YYAS)", link: "https://africanscholars.yale.edu/", detail: "Selected from applicants across Africa for a one-week program in Nairobi that taught cultural understanding and that dreams can be reached." },
 ];
 
 export const AWARDS = [
   { icon: "🏆", title: "Best STEAM Project Award",       org: "Agahozo-Shalom Youth Village",     year: "2025"         },
   { icon: "🥉", title: "3rd Place — National Innovation", org: "Rwanda FIRST LEGO League",         year: "2025"         },
-  // { icon: "🎓", title: "Yale Young African Scholars",     org: "YYAS — Selected Participant",      year: "2025"         },
+  { icon: "🎓", title: "Yale Young African Scholars",     org: "Selected Participant — Nairobi, Kenya", year: "2026", link: "https://africanscholars.yale.edu/" },
   { icon: "🌐", title: "U.S. State Dept. Access Scholar", org: "English Access Microscholarship",  year: "2024–Present" },
 ];

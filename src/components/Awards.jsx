@@ -27,7 +27,11 @@ export default function Awards() {
               <div style={{ width: 52, height: 52, borderRadius: 12, background: ORANGE_DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.55rem", flexShrink: 0 }}>{a.icon}</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: "1rem", color: WHITE, marginBottom: 4 }}>{a.title}</div>
-                <div style={{ fontSize: "0.82rem", color: ORANGE, fontWeight: 500, marginBottom: 4 }}>{a.org}</div>
+                <div style={{ fontSize: "0.82rem", color: ORANGE, fontWeight: 500, marginBottom: 4 }}>
+                  {a.link ? (
+                    <a href={a.link} target="_blank" rel="noopener noreferrer" style={{ color: ORANGE, textDecoration: "none" }}>{a.org} ↗</a>
+                  ) : a.org}
+                </div>
                 <div style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.28)", fontWeight: 500 }}>{a.year}</div>
               </div>
             </div>
